@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,8 +12,41 @@
   text-align: center;
 }
 
-@keyframes pulse{
-  50%{
-    opacity: .5;
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@layer components {
+  .title {
+    @apply text-4xl font-extrabold  hover:text-transparent hover:bg-gradient-to-r hover:bg-clip-text hover:from-indigo-950 hover:to-purple-950 dark:text-transparent dark:bg-gradient-to-r dark:bg-clip-text dark:from-indigo-950 dark:to-purple-950 dark:hover:text-white transition-colors duration-300 ease-linear;
+  }
+  .logo {
+    @apply text-4xl pb-2 size-11 rotate-45 hover:hue-rotate-180 hover:rotate-180 hover:text-indigo-900 dark:text-indigo-950 dark:hover:-rotate-180 dark:hover:text-white duration-300 ease-linear;
+  }
+  .header {
+    @apply bg-gradient-to-l from-indigo-800 to-purple-900 text-white p-6 mx-0 rounded-tl-lg rounded-tr-lg flex justify-around items-center;
+  }
+  .github-icon {
+    @apply absolute flex items-center justify-center text-5xl font-bold rounded-3xl shadow-md hover:shadow-sm hover:shadow-black text-indigo-950 dark:text-gray-50  opacity-0 group-hover:opacity-100 dark:hover:shadow-sm dark:shadow-slate-400 transition-all duration-300 ease-in-out;
+  }
+  .footer {
+    @apply bg-gradient-to-tl from-purple-800 to-indigo-900 text-white p-6 mt-6 rounded-br-lg rounded-bl-lg;
+  }
+  .label {
+    @apply block text-lg pb-2 font-bold text-indigo-900 dark:text-indigo-600;
+  }
+  .input {
+    @apply w-3/4 p-2 rounded-md bg-white dark:bg-gray-700 caret-indigo-800 dark:caret-white focus:outline-none shadow-md shadow-slate-500 focus:shadow-lg focus:shadow-slate-400 dark:shadow-lg dark:shadow-gray-800 dark:focus:shadow-none transition duration-500;
+  }
+  .button-base {
+    @apply px-6 py-2 bg-gradient-to-br from-indigo-600 to-purple-950 text-white text-lg  font-bold rounded-full border-2 border-gray-700 transition-all duration-500 ease-linear;
+  }
+  .button-enabled {
+    @apply hover:bg-clip-text hover:bg-clip-content hover:bg-white hover:text-indigo-900 dark:hover:text-blue-50;
+  }
+  .button-disabled {
+    @apply opacity-50 dark:opacity-70 dark:text-gray-400 cursor-not-allowed;
   }
 }

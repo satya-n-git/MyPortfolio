@@ -33,19 +33,13 @@ function App() {
   ];
   return (
     <div className="font-poppins bg-gradient-to-br from-indigo-800 to-purple-700 shadow-lg shadow-indigo-900 rounded-[10px] mx-auto max-w-7xl">
-      <header className="bg-gradient-to-l from-indigo-800 to-purple-900 text-white p-6 mx-0 rounded-tl-lg rounded-tr-lg flex justify-around items-center">
-        
+      <header className="header">
         <div className="flex justify-between items-center w-3/4 px-10 mx-2">
-          <h1 className="text-4xl font-extrabold  hover:text-transparent hover:bg-gradient-to-r hover:bg-clip-text hover:from-indigo-950 hover:to-purple-950 dark:text-transparent dark:bg-gradient-to-r dark:bg-clip-text dark:from-indigo-950 dark:to-purple-950 dark:hover:text-white transition-colors duration-300 ease-linear">
-            Satya's Portfolio
-          </h1>
-          <FontAwesomeIcon
-            icon={faCircleNodes}
-            className=" text-4xl pb-2 size-11 rotate-45 hover:hue-rotate-180 hover:rotate-180 hover:text-indigo-900 dark:text-indigo-950 dark:hover:-rotate-180 dark:hover:text-white duration-300 ease-linear"
-          />
+          <h1 className="title">Satya's Portfolio</h1>
+          <FontAwesomeIcon icon={faCircleNodes} className="logo" />
         </div>
         <div className="flex justify-end items-center w-1/4 px-10">
-          <ThemeToggle/>
+          <ThemeToggle />
         </div>
       </header>
       <main className="mx-3">
@@ -88,7 +82,7 @@ function App() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group rounded-md px-4 hover:bg-opacity-50 shadow-card dark:shadow-darkcard relative flex flex-col items-center justify-center  overflow-hidden transform transition-transform hover:scale-105 hover:duration-300 ease-in-out transition-colors duration-400 ease-in-out"
+                className="group rounded-md px-4 hover:bg-opacity-50 shadow-card dark:shadow-darkcard relative flex flex-col items-center justify-center  overflow-hidden transform transition-transform hover:scale-105 hover:duration-300 ease-in-out transition-colors duration-500 ease-in-out"
               >
                 <div className="flex flex-col justify-center items-center h-full">
                   <div className="flex justify-center items-center mt-2  p-1 mb-3 w-full rounded-full bg-indigo-400 group-hover:bg-indigo-900 duration-300 shadow-lg shadow-black overflow-hidden">
@@ -106,7 +100,7 @@ function App() {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute flex items-center justify-center text-5xl font-bold rounded-3xl shadow-md hover:shadow-sm hover:shadow-black text-indigo-950 dark:text-gray-50  opacity-0 group-hover:opacity-100 dark:hover:shadow-sm dark:shadow-slate-400 transition-all duration-300 ease-in-out"
+                  className="github-icon"
                 >
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
@@ -132,7 +126,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="bg-gradient-to-tl from-purple-800 to-indigo-900 text-white p-6 mt-6 rounded-br-lg rounded-bl-lg">
+      <footer className="footer">
         <p>&copy; 2024 Satya. All rights reserved.</p>
       </footer>
     </div>

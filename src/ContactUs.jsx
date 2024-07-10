@@ -40,23 +40,18 @@ export const ContactUs = () => {
   }, [formData]);
 
   const handleInputChange = (e) => {
-    const {name, value} = e.target;
-    setFormData({ ...formData, [name]: value})
-  }
-
-
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   return (
     <form ref={form} onSubmit={sendEmail} className="space-y-4">
       <div>
-        <label
-          className="block text-lg pb-2 font-bold text-indigo-900 dark:text-indigo-600"
-          htmlFor="user_name"
-        >
+        <label className="label" htmlFor="user_name">
           Name
         </label>
         <input
-          className="w-3/4 p-2 rounded-md bg-white dark:bg-gray-700 caret-indigo-800 dark:caret-white focus:outline-none shadow-md shadow-slate-500 focus:shadow-lg focus:shadow-slate-400 dark:shadow-lg dark:shadow-gray-800 dark:focus:shadow-none transition duration-500"
+          className="input"
           type="text"
           id="user_name"
           name="user_name"
@@ -69,14 +64,11 @@ export const ContactUs = () => {
         />
       </div>
       <div>
-        <label
-          className="block text-lg pb-2 font-bold text-indigo-900 dark:text-indigo-600"
-          htmlFor="user_email"
-        >
+        <label className="label" htmlFor="user_email">
           Email
         </label>
         <input
-          className={`w-3/4 p-2 rounded-md bg-white dark:bg-gray-700 caret-indigo-800 dark:caret-white focus:outline-none shadow-md shadow-slate-500 focus:shadow-lg focus:shadow-slate-400 dark:shadow-lg dark:shadow-gray-800 dark:focus:shadow-none transition duration-500`}
+          className="input"
           type="email"
           id="user_email"
           name="from_name"
@@ -88,14 +80,11 @@ export const ContactUs = () => {
         />
       </div>
       <div>
-        <label
-          className="block text-lg pb-2 font-bold text-indigo-900 dark:text-indigo-600"
-          htmlFor="message"
-        >
+        <label className="label" htmlFor="message">
           Message
         </label>
         <textarea
-          className="w-3/4 p-2 rounded-md bg-white dark:bg-gray-700 caret-indigo-800 dark:caret-white focus:outline-none shadow-md shadow-slate-500 focus:shadow-lg focus:shadow-slate-400 dark:shadow-lg dark:shadow-gray-800 dark:focus:shadow-none transition duration-500"
+          className="input"
           id="message"
           name="message"
           rows="4"
@@ -105,7 +94,9 @@ export const ContactUs = () => {
         ></textarea>
       </div>
       <button
-        className={`px-6 py-2 bg-gradient-to-br from-indigo-600 to-purple-950 text-white text-lg  font-bold rounded-full border-2 border-gray-700 transition-all duration-500 ease-linear ${isFormValid ? 'hover:bg-clip-text hover:bg-clip-content hover:bg-white hover:text-indigo-900 dark:hover:text-blue-50' : 'opacity-50 dark:opacity-70 dark:text-gray-400 cursor-not-allowed'}`}
+        className={`button-base ${
+          isFormValid ? "button-enabled" : "button-disabled"
+        }`}
         type="submit"
         disabled={!isFormValid}
       >
