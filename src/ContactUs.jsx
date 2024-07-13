@@ -69,7 +69,7 @@ export const ContactUs = () => {
         </label>
         <input
           className="input"
-          type="email"
+          type="text"
           id="user_email"
           name="from_name"
           placeholder="Enter your email eg: satya@gmail.com"

@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+body{
+  background-color:whitesmoke;
+}
+
 @keyframes pulse {
   50% {
     opacity: 0.5;
@@ -19,26 +23,39 @@
 }
 
 @layer components {
-  .title {
-    @apply text-4xl font-extrabold  hover:text-transparent hover:bg-gradient-to-r hover:bg-clip-text hover:from-indigo-950 hover:to-purple-950 dark:text-transparent dark:bg-gradient-to-r dark:bg-clip-text dark:from-indigo-950 dark:to-purple-950 dark:hover:text-white transition-colors duration-300 ease-linear;
+  .portfolio-container {
+    @apply container font-poppins bg-gradient-to-br from-indigo-800 to-purple-700 shadow-lg shadow-indigo-900 rounded-[10px] mx-auto max-w-7xl;
   }
+  .portfolio-title {
+    @apply text-4xl font-extrabold max-lg:text-3xl max-xl:hidden hover:text-transparent hover:bg-gradient-to-r hover:bg-clip-text hover:from-gray-900 hover:to-blue-950 dark:text-transparent dark:bg-gradient-to-r dark:bg-clip-text dark:from-gray-900 dark:to-blue-950 dark:hover:text-white transition-colors duration-300 ease-linear;
+  }
+  .main-section {
+    @apply p-6 bg-blue-50 dark:bg-gray-900 shadow-main-2 mt-6 mx-4 rounded-lg transition-colors duration-300 ease-in-out;
+  }
+  .main-section-title {
+    @apply text-4xl max-lg:text-2xl sm:leading-none font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-900 mb-2 max-lg:mb-0 pb-2 max-lg:pb-1;
+  }
+  .main-section-title-icon {
+    @apply mb-4 max-lg:mb-1 ml-3 pb-0 h-9 sm:h-8 text-indigo-900 hover:text-indigo-950 transition-colors duration-300 ease-in-out;
+  }
+
   .logo {
-    @apply text-4xl pb-2 size-11 rotate-45 hover:hue-rotate-180 hover:rotate-180 hover:text-indigo-900 dark:text-indigo-950 dark:hover:-rotate-180 dark:hover:text-white duration-300 ease-linear;
+    @apply text-4xl pb-2  max-lg:mr-16 size-11 rotate-45 hover:hue-rotate-180 hover:rotate-180 hover:text-indigo-900 dark:text-indigo-950 dark:hover:-rotate-180 dark:hover:text-white duration-300 ease-linear;
   }
   .header {
     @apply bg-gradient-to-l from-indigo-800 to-purple-900 text-white p-6 mx-0 rounded-tl-lg rounded-tr-lg flex justify-around items-center;
   }
   .github-icon {
-    @apply absolute flex items-center justify-center text-5xl font-bold rounded-3xl shadow-md hover:shadow-sm hover:shadow-black text-indigo-950 dark:text-gray-50  opacity-0 group-hover:opacity-100 dark:hover:shadow-sm dark:shadow-slate-400 transition-all duration-300 ease-in-out;
+    @apply absolute flex items-center justify-center text-5xl font-bold rounded-3xl shadow-lg shadow-blue-200 hover:shadow-none text-indigo-950 dark:text-gray-50  opacity-0 group-hover:opacity-100 dark:shadow-black dark:shadow-lg dark:hover:shadow-none transition-all duration-300 ease-in-out;
   }
   .footer {
     @apply bg-gradient-to-tl from-purple-800 to-indigo-900 text-white p-6 mt-6 rounded-br-lg rounded-bl-lg;
   }
   .label {
-    @apply block text-lg pb-2 font-bold text-indigo-900 dark:text-indigo-600;
+    @apply block text-lg pb-2 pb-0 font-bold text-indigo-900 dark:text-indigo-600;
   }
   .input {
-    @apply w-3/4 p-2 rounded-md bg-white dark:bg-gray-700 caret-indigo-800 dark:caret-white focus:outline-none shadow-md shadow-slate-500 focus:shadow-lg focus:shadow-slate-400 dark:shadow-lg dark:shadow-gray-800 dark:focus:shadow-none transition duration-500;
+    @apply sm:text-sm lg:text-base w-3/4 p-2 rounded-md bg-white dark:bg-gray-700 caret-indigo-800 dark:caret-white focus:outline-none shadow-md shadow-slate-500 focus:shadow-lg focus:shadow-slate-400 dark:shadow-md dark:shadow-gray-800 dark:focus:shadow-none transition duration-500;
   }
   .button-base {
     @apply px-6 py-2 bg-gradient-to-br from-indigo-600 to-purple-950 text-white text-lg  font-bold rounded-full border-2 border-gray-700 transition-all duration-500 ease-linear;
