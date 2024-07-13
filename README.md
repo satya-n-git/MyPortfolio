@@ -23,13 +23,13 @@ MyPortfolio is a simple single-page application designed to showcase my skills, 
 4. Start the development server.
 5. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-### Commands
+## Commands
 
-```bash
-git clone https://github.com/satya-n-git/MyPortfolio.git
-cd MyPortfolio
-npm install
-npm run dev
+    ```bash
+    git clone https://github.com/satya-n-git/MyPortfolio.git
+    cd MyPortfolio
+    npm install
+    npm run dev
 
 ## Usage
 - **Home:** An introduction to who I am.
@@ -52,7 +52,7 @@ I welcome contributions to improve this portfolio. To contribute, please follow 
 This project is licensed under the MIT License.
 
 ## Contact
-For any questions or inquiries, please reach out to me at your-email@example.com.
+For any questions or inquiries, please reach out to me at nambusatya@gmail.com.
 
 Thank you for visiting my portfolio!
 
